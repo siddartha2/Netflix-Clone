@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0f;
+  --color-bg-elevated: #15141c;
+  --color-bg-card: #1c1a24;
+  --color-text: #f3f1ea;
+  --color-text-muted: #a39fae;
+  --color-accent: #e8a33d;
+  --color-accent-hover: #f2b658;
+  --color-ember: #c2410c;
+  --color-line: #2a2733;
+
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+/* Sprocket-hole strip: the film-reel signature motif used as a divider */
+.sprocket-strip {
+  height: 10px;
+  background-image: radial-gradient(circle, var(--color-bg) 2.5px, transparent 2.6px);
+  background-size: 22px 10px;
+  background-position: 8px center;
+  background-color: var(--color-line);
+  opacity: 0.6;
+}
+
+/* Custom scrollbar for horizontal movie rows */
+.row-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.row-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.row-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 4px;
+}
+
+.row-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
